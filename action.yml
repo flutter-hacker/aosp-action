@@ -1,0 +1,17 @@
+name: 'Build AOSP Action'
+description: 'Build AOSP'
+author: 'eggfly'
+branding:
+  icon: 'maximize'
+  color: 'blue'
+inputs:
+  aosp_revision:
+    description: 'The revision of the repo.'
+    required: false
+runs:
+  using: 'composite'
+  steps:
+    - run: $GITHUB_ACTION_PATH/build.sh "${{ inputs.aosp_revision }}"
+      shell: bash
+      env:
+        INPUT_AOSP_REVISION: ${{ inputs.aosp_revision }}
