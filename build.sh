@@ -32,6 +32,9 @@ repo init -u https://android.googlesource.com/platform/manifest
 checkResult
 
 repo sync -c -j`sysctl -n hw.ncpu`
+
+df -h
+
 checkResult
 
 echo "Done!"
