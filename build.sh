@@ -31,7 +31,7 @@ git config --global color.ui auto
 repo init -u https://android.googlesource.com/platform/manifest
 checkResult
 
-repo sync -c -j3
+repo sync -c -j`sysctl -n hw.ncpu`
 checkResult
 
 echo "Done!"
