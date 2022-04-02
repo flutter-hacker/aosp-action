@@ -26,6 +26,7 @@ df -h
 cd ~ && mkdir aosp && cd aosp
 git config --global user.name eggfly
 git config --global user.email eggfly@qq.com
+git config --global color.ui auto
 
 repo init -u https://android.googlesource.com/platform/manifest
 checkResult
