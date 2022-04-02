@@ -23,4 +23,14 @@ repo version
 
 df -h
 
+cd ~ && mkdir aosp && cd aosp
+git config --global user.name eggfly
+git config --global user.email eggfly@qq.com
+
+repo init -u https://android.googlesource.com/platform/manifest
+checkResult
+
+repo sync -c -j3
+checkResult
+
 echo "Done!"
