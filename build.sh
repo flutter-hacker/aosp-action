@@ -40,6 +40,7 @@ df -h
 
 cd frameworks/base
 git log
+cd ../..
 
 source build/envsetup.sh
 lunch aosp_arm-eng
