@@ -28,13 +28,18 @@ git config --global user.name eggfly
 git config --global user.email eggfly@qq.com
 git config --global color.ui auto
 
-repo init -u https://android.googlesource.com/platform/manifest
+repo init --depth=1 -u https://android.googlesource.com/platform/manifest
 checkResult
 
+sysctl -n hw.ncpu
+
 repo sync -c -j`sysctl -n hw.ncpu`
+checkResult
 
 df -h
 
-checkResult
+cd frameworks/base
+git log
+
 
 echo "Done!"
