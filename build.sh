@@ -41,5 +41,11 @@ df -h
 cd frameworks/base
 git log
 
+source build/envsetup.sh
+lunch aosp_arm-eng
+checkResult
+
+m
+checkResult
 
 echo "Done!"
